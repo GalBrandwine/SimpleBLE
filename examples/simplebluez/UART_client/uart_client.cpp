@@ -85,7 +85,7 @@ int main(int argc, char* argv[]) {
         auto peripheral = peripherals[selection];
         std::cout << "Connecting to " << peripheral->name() << " [" << peripheral->address() << "]" << std::endl;
 
-        for (int attempt = 0; attempt < 3; attempt++) {
+        for (int attempt = 0; attempt < 5; attempt++) {
             try {
                 peripheral->connect();
                 millisecond_delay(1000);
